@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/.vs/BananaProject
+/BananaProject/x64
+/x64
