@@ -61,7 +61,7 @@ void bananaThread()
     if (!AddMoneyHook.hook())
         MessageBoxA(0, "Failed To Hook UpdateMoney::AddMoney", "SASAVN HACK", 0);
 
-    MessageBoxA(0, "Press to banana once to start process (the text will not update automatically, press banana to see new value)", "SASAVN HACK", 0);
+    MessageBoxA(0, "Press to banana once to start ItemDropChecks", "SASAVN HACK", 0);
 
     auto lastDropTime = std::chrono::high_resolution_clock::now() + std::chrono::seconds(1);
 
@@ -74,8 +74,9 @@ void bananaThread()
                 addMoneyThis->fields.CPS *= -1;
         }
 
-        if (BananaClickedDrop && lastDropTime < std::chrono::high_resolution_clock::now()) {
-            ItemDropCheck__TriggerItems(itemDropThis, itemDropMethod);
+        if (lastDropTime < std::chrono::high_resolution_clock::now()) {
+            if (BananaClickedDrop)
+				ItemDropCheck__TriggerItems(itemDropThis, itemDropMethod);
 
             if (BananaClickedAddMoney)
                 PLH::FnCast(UpdateMoney__UpdateCounterP, UpdateMoney__AddMoney)(addMoneyThis, addMoneyMethod);
