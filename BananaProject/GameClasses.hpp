@@ -10,7 +10,15 @@ struct UnityEngine_MonoBehaviour_Fields : UnityEngine_Object_Fields {
 
 struct UpdateMoney_Fields : UnityEngine_MonoBehaviour_Fields {
 	struct TMPro_TMP_Text_o* moneyText;
-	uint64_t cjt;
+	struct TMPro_TMP_Text_o* clicksPerSecond;
+	uint64_t moneyAmount;
+	bool clickAccept; //idk, just some flag if deltaTimeClick >= 0.045
+	float deltaTimeClick;
+	int32_t CPS;
+	float deltaTimeCSP;
+	struct UnityEngine_RectTransform_o* imageRectTransform;
+	struct ClickAnimation_o* clickAnimation;
+	struct UnityEngine_Canvas_o* to;
 };
 
 struct UpdateMoney_o {
