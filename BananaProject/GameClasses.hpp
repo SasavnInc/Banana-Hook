@@ -8,21 +8,21 @@ struct UnityEngine_MonoBehaviour_Fields : UnityEngine_Object_Fields {
 	struct System_Threading_CancellationTokenSource_o* m_CancellationTokenSource;
 };
 
-struct UpdateMoney_Fields : UnityEngine_MonoBehaviour_Fields {
+struct UpdateMoneys_Fields : UnityEngine_MonoBehaviour_Fields {
 	struct TMPro_TMP_Text_o* moneyText;
 	struct TMPro_TMP_Text_o* clicksPerSecond;
-	uint64_t moneyAmount;
-	bool clickAccept; //idk, just some flag if deltaTimeClick >= 0.045
-	float deltaTimeClick;
-	int32_t CPS;
-	float deltaTimeCSP;
+	uint64_t money;
+	bool tick;
+	float tickFrame;
+	int32_t timesClickedPerSecond;
+	float framesPerSecond;
 	struct UnityEngine_RectTransform_o* imageRectTransform;
 	struct ClickAnimation_o* clickAnimation;
 	struct UnityEngine_Canvas_o* to;
 };
 
-struct UpdateMoney_o {
+struct UpdateMoneys_o {
 	class UpdateMoney_c* klass;
 	void* monitor;
-	UpdateMoney_Fields fields;
+	UpdateMoneys_Fields fields;
 };
